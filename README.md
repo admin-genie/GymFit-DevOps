@@ -12,4 +12,4 @@
 ![workflow](https://github.com/user-attachments/assets/7911b9f7-5954-4c6d-8ca0-a18198971ca1)
 
 당시 안 쓰는 이메일로 프로젝트 리포지토리를 새로 만들어 사용했습니다.\
-빌드 동작을 확인하고 싶다면 [여기](https://github.com/GymFit-Dev/GymFit-Application)를 클릭해 주세요.
+빌드 동작을 확인하고 싶다면 [여기](https://github.com/GymFit-Dev/GymFit-Application)를 클릭해 주세요. Action 탭으로 이동하시면 됩니다.
