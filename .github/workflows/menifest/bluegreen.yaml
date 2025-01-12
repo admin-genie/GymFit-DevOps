@@ -1,9 +1,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: rollout-bluegreen
+  name: rollout-bluegreen-stg
 spec:
-  replicas: 10
+# 자원 절약을 위해 replica를 default(=1)로 둠
   revisionHistoryLimit: 2
   selector:
     matchLabels:
@@ -22,20 +22,20 @@ spec:
           - containerPort: 8081
         resources:
           limits:
-            cpu: "300m"
+            cpu: "500m"
           requests:
-            cpu: "300m"
+            cpu: "500m"
   strategy:
     blueGreen: 
-      activeService: rollout-bluegreen-active
-      previewService: rollout-bluegreen-preview
+      activeService: rollout-bluegreen-active-stg
+      previewService: rollout-bluegreen-preview-stg
       autoPromotionEnabled: false
 
 ---
 kind: Service
 apiVersion: v1
 metadata:
-  name: rollout-bluegreen-active
+  name: rollout-bluegreen-active-stg
 spec:
   type: NodePort
   selector:
@@ -44,13 +44,13 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8081
-    nodePort: 30090
+    nodePort: 30092
 
 ---
 kind: Service
 apiVersion: v1
 metadata:
-  name: rollout-bluegreen-preview
+  name: rollout-bluegreen-preview-stg
 spec:
   type: NodePort
   selector:
@@ -59,4 +59,4 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8081
-    nodePort: 30091
+    nodePort: 30093
