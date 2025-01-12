@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: self-sync-application-prd
+  name: self-sync-application-stg
 spec:
   project: default
   source:
     repoURL: 'git@github.com:GymFit-Dev/dev-app.git'
     path: .
-    targetRevision: main
+    targetRevision: staging
     directory:
       recurse: true
       jsonnet: {}
