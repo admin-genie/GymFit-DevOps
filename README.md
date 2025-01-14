@@ -9,7 +9,7 @@
 [![Naver Blog Badge](https://img.shields.io/badge/Naver%20Blog-03C75A?style=flat&logo=Naver&logoColor=white)](https://blog.naver.com/genie290/223451486457)
 
 ## 3. CI/CD Workflow
-![workflow](https://github.com/user-attachments/assets/7911b9f7-5954-4c6d-8ca0-a18198971ca1)
+![cicd_workflow](https://github.com/user-attachments/assets/d59fe27c-5b86-46a3-8677-56686e5488cf)
 
 당시 안 쓰는 이메일로 프로젝트 리포지토리를 새로 만들어 사용했습니다.\
 빌드 동작을 확인하고 싶다면 [여기](https://github.com/GymFit-Dev/GymFit-Application)를 클릭해 주세요. Action 탭으로 이동하시면 됩니다.
